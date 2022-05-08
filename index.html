@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+      width: 99.5vw;
+      height: 98.5vh;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "autoRotate":-0.5,
+    "autoRotateInactivityDelay":4000,
+    "compass": false,
+    "autoLoad": true,
+    "default": {
+        "firstScene": "stue",
+        "author": "Østersunds Gate 24, Trondheim",
+        "authorURL":"https://hybel.no/bolig/132880/rom-i-bofellesskap-ostersunds-gate-24-trondheim-5/",
+        "sceneFadeDuration": 1000
+    },
+
+    "scenes": {
+        "kjokken": {
+            "title": "Kjøkken",
+            "hfov": 220,
+            "pitch": -7,
+            "yaw": 97,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_150237_1_kjokken-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 121,
+                    "type": "scene",
+                    "text": "Soverom ved kjøkken",
+                    "sceneId": "sov1"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 168,
+                    "type": "scene",
+                    "text": "Soverom mellom kjøkken og stue",
+                    "sceneId": "sov2"
+                },
+//                {
+//                    "pitch": -2.1,
+//                    "yaw": 188,
+//                    "type": "scene",
+//                    "text": "Soverom til venstre for bad",
+//                    "sceneId": "sov3"
+//                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 215,
+                    "type": "scene",
+                    "text": "Bad",
+                    "sceneId": "bad"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 225,
+                    "type": "scene",
+                    "text": "Soverom til høyre for bad",
+                    "sceneId": "sov4"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 245,
+                    "type": "scene",
+                    "text": "stue",
+                    "sceneId": "stue"
+                },
+
+            ]
+        },
+        "stue": {
+            "title": "Stue",
+            "hfov": 120,
+            "yaw": 10,
+            "pitch": -8,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_145855_0_stue-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 98,
+                    "type": "scene",
+                    "text": "kjokken",
+                    "sceneId": "kjokken",
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 260,
+                    "type": "scene",
+                    "text": "Bad",
+                    "sceneId": "bad"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "Soverom mellom kjøkken og stue",
+                    "sceneId": "sov2"
+                },
+
+                {
+                    "pitch": -2.1,
+                    "yaw": 275,
+                    "type": "scene",
+                    "text": "Soverom til høyre for bad",
+                    "sceneId": "sov4"
+                },
+
+            ]
+        },
+        "sov1": {
+            "title": "Soverom ved kjøkken",
+            "hfov": 120,
+            "yaw": 275,
+            "pitch": -7,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_150710_0_sov1_blured-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 42.1,
+                    "type": "scene",
+                    "text": "kjokken",
+                    "sceneId": "kjokken",
+                }
+            ]
+        },
+        "sov2": {
+            "title": "Soverom mellom kjøkken og stue",
+            "hfov": 120,
+            "yaw": 31,
+            "pitch": -10,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_151103_1_sov2-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 220,
+                    "type": "scene",
+                    "text": "stue",
+                    "sceneId": "stue",
+                }
+            ]
+        },
+//        "sov3": {
+//            "title": "Soverom til venstre for bad",
+//            "hfov": 120,
+//            "yaw": 5,
+//            "type": "equirectangular",
+//            "panorama": "",
+//            "hotSpots": [
+//                {
+//                    "pitch": -0.6,
+//                    "yaw": 37.1,
+//                    "type": "scene",
+//                    "text": "stue",
+//                    "sceneId": "stue",
+//                }
+//            ]
+//        },
+        "bad": {
+            "title": "Bad",
+            "hfov": 120,
+            "yaw": 165,
+            "pitch": -10,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_152501_0_bad-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 317,
+                    "type": "scene",
+                    "text": "Stue",
+                    "sceneId": "stue",
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 298,
+                    "type": "scene",
+                    "text": "Bakgård",
+                    "sceneId": "bakgard",
+                }
+ 
+            ]
+        },
+        "sov4": {
+            "title": "Soverom til høyre for bad",
+            "hfov": 120,
+            "yaw": 330,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_152800_0_sov4-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 190.1,
+                    "type": "scene",
+                    "text": "stue",
+                    "sceneId": "stue",
+                },
+                {
+                    "pitch": -12,
+                    "yaw": 153.1,
+                    "type": "scene",
+                    "text": "Bakgard",
+                    "sceneId": "bakgard",
+                }
+ 
+            ]
+        },
+        "bakgard": {
+            "title": "bakgard",
+            "hfov": 120,
+            "yaw": 220,
+            "type": "equirectangular",
+            "panorama": "PANO_20220506_161339_0_bakgard-small.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 48,
+                    "yaw": 101.1,
+                    "type": "scene",
+                    "text": "Stue",
+                    "sceneId": "stue",
+                }
+            ]
+        }
+
+    }
+});
+</script>
+
+</body>
+</html>
