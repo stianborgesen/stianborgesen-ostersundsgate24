@@ -1,0 +1,8 @@
+[[headers]]
+  for = "*.jpg" # jpg files should be set this way
+  [headers.values]
+    cache-control = '''
+    max-age=300,
+    no-cache,
+    no-store,
+    must-revalidate'''
