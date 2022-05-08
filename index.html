@@ -241,26 +241,30 @@ pannellum.viewer('panorama', {
 
     }
 });
+var loadInterval = 4000
 var images = [];
-function preload() {
-    for (var i = 0; i < arguments.length; i++) {
-        images[i] = new Image();
-        images[i].src = preload.arguments[i];
+function preload(images) {
+    for (var i = 0; i < images.length; i++) {
+        let url = images[i]
+        setTimeout(
+          i => {
+            image = new Image();
+            image.src = url
+          }, i * loadInterval
+        )
     }
 }
 
 setTimeout(
-  () => preload(
-    "PANO_20220506_151103_1_sov2-small.jpg",
-    "PANO_20220506_145855_0_stue-small.jpg",
+  () => preload([
     "PANO_20220506_150237_1_kjokken-small.jpg",
     "PANO_20220506_150710_0_sov1_blured_small.jpg",
     "PANO_20220506_151103_1_sov2-small.jpg",
     "PANO_20220506_152501_0_bad-small.jpg",
     "PANO_20220506_152800_0_sov4-small.jpg",
     "PANO_20220506_161339_0_bakgard-small.jpg"
-  )
-, 2000);
+  ])
+, loadInterval);
 
 </script>
 
